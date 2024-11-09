@@ -7,42 +7,10 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Lora:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
     
-<!-- JavaScript -->
-<script>
-    function showImage(imagePath) {
-      const modal = document.getElementById("image-modal");
-      const modalImage = document.getElementById("modal-image");
-      modal.style.display = "block";
-      modalImage.src = imagePath;
-    }
-  
-    // Close the modal when the close button is clicked
-    document.getElementById("close-modal").onclick = function() {
-      document.getElementById("image-modal").style.display = "none";
-    }
-  
-    // Close the modal when clicking outside the image
-    window.onclick = function(event) {
-      const modal = document.getElementById("image-modal");
-      if (event.target === modal) {
-        modal.style.display = "none";
-      }
-    }
-  </script> 
+
 
 <title>HAIR BASICS</title>
 </head>
-
-<!-- 
-<a class="subnav-link" href="#Hair_Shaft" >Hair Shaft</a>
- <a class="subnav-link" href="#Hair_Follicle" >Hair Follicle</a>
-    <a class="subnav-link" href="#Hair_Root" ">Hair Root</a>
-
-<a class="subnav-link" href="javascript:void(0);" onclick="showImage('hair_shaft.jpg')">Hair Shaft</a>
-        <a class="subnav-link" href="javascript:void(0);" onclick="showImage('hair_follicle.jpg')">Hair Follicle</a>
-        <a class="subnav-link" href="javascript:void(0);" onclick="showImage('hair_root.jpg')">Hair Root</a>
-      </nav>
-      -->
 
 
 <body>
@@ -224,5 +192,31 @@ Contains the hair bulb, where hair cells rapidly divide to form the hair strand.
 </section>
 
     </main>
+
+<!--JAVASCRIPT-->
+<script>
+    // Function to show the image in the modal
+    function showImage(imagePath) {
+      const modal = document.getElementById("image-modal");
+      const modalImage = document.getElementById("modal-image");
+      modal.style.display = "block";
+      modalImage.src = imagePath;
+    }
+  
+    // Close the modal when the close button (×) is clicked
+    document.getElementById("close-modal").onclick = function() {
+      document.getElementById("image-modal").style.display = "none";
+    };
+  
+    // Close the modal when clicking outside the image
+    window.onclick = function(event) {
+      const modal = document.getElementById("image-modal");
+      if (event.target === modal) {
+        modal.style.display = "none";
+      }
+    };
+  </script>
+  
+    
     </body>
   </html>
