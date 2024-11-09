@@ -10,11 +10,25 @@
 <!-- JavaScript -->
 <script>
     function showImage(imagePath) {
-      const image = document.getElementById("displayed-image");
-      image.src = imagePath;
-      image.style.display = "block";
+      const modal = document.getElementById("image-modal");
+      const modalImage = document.getElementById("modal-image");
+      modal.style.display = "block";
+      modalImage.src = imagePath;
     }
-  </script>    
+  
+    // Close the modal when the close button is clicked
+    document.getElementById("close-modal").onclick = function() {
+      document.getElementById("image-modal").style.display = "none";
+    }
+  
+    // Close the modal when clicking outside the image
+    window.onclick = function(event) {
+      const modal = document.getElementById("image-modal");
+      if (event.target === modal) {
+        modal.style.display = "none";
+      }
+    }
+  </script> 
 
 <title>HAIR BASICS</title>
 </head>
@@ -55,8 +69,10 @@
   <a class="nav-link" href="#Scalp_and_Hair_Problems">Scalp and Hair Problems</a>
 </nav>
 
-<div id="image-container">
-    <img id="displayed-image" src="" alt="Hair Anatomy" style="display:none; max-width:100%; height:auto;">
+<!-- Modal Overlay -->
+<div id="image-modal" class="modal">
+    <span id="close-modal" class="close">&times;</span>
+    <img id="modal-image" class="modal-content" src="" alt="Hair Anatomy">
   </div>
 
 
