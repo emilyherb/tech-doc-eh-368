@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="styles.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Lora:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+    
+    
+<title>HAIR BASICS</title>
+</head>
+
+<!-- 
+<a class="subnav-link" href="#Hair_Shaft" >Hair Shaft</a>
+
+<a class="subnav-link" href="javascript:void(0);" onclick="showImage('hair_shaft.jpg')">Hair Shaft</a>
+        <a class="subnav-link" href="javascript:void(0);" onclick="showImage('hair_follicle.jpg')">Hair Follicle</a>
+        <a class="subnav-link" href="javascript:void(0);" onclick="showImage('hair_root.jpg')">Hair Root</a>
+      </nav>
+      -->
+
+
+<body>
+  <!--navigation bar-->
+  <nav id="navbar">
+  <header id="doc-title">HAIR BASICS</header>
+  <a class="nav-link" href="#Introduction">Introduction</a>
+<hr>
+<a class="nav-link" href="#Hair_Anatomy">Hair Anatomy</a>
+<div class="dropdown">
+  <nav class="subnav">
+    <a class="subnav-link" href="javascript:void(0);" onclick="showImage('Hair_Shaft.jpg')">Hair Shaft</a>
+    <a class="subnav-link" href="#Hair_Follicle" >Hair Follicle</a>
+    <a class="subnav-link" href="#Hair_Root" ">Hair Root</a>
+  </nav>
+</div>
+<hr>
+  <a class="nav-link" href="#Hair_Growth">Hair Growth</a>
+<hr>
+  <a class="nav-link" href="#Hair_Types">Hair Types</a>
+<hr>
+  <a class="nav-link" href="#Hair_Loss">Hair Loss</a>
+<hr>
+  <a class="nav-link" href="#Scalp_and_Hair_Problems">Scalp and Hair Problems</a>
+</nav>
+
+<main id="main-doc"><!--main page content-->
+
+<section id="Introduction" class="main-section">
+<header>Introduction</header>
+<p>Hair is a filamentous biomaterial composed of keratin, primarily produced from hair follicles located in the skin. Its purpose is to help our bodies regulate temperature, and when located elsewhere on the body, filter out irritants. Beyond that, hair can have a psychological impact on us as well.</p>
+
+</section>
+
+<!--hair anatomy section-->
+<section class="main-section" id="Hair_Anatomy">
+  <header>Hair Anatomy</header>
+  <p>Hair is a filamentous biomaterial composed of keratin, primarily produced from hair follicles located in the skin. This section provides an overview of the biological process behind hair growth and the anatomical structure of hair.</p>
+
+  <p>Understanding the primary components of hair structures is essential for studying hair growth:</p>
+  <ul>
+<li>Hair shaft</li>
+<li>Follicle</li>
+<li>Root</li>
+</ul>
+
+<h2 class="subheader" id="Hair_Shaft">Hair Shaft</h2>
+<p>The visible part of the hair that extends beyond the scalp.</p>
+
+<code><span class="class">class</span> <span class="variable">hairShaft</span>{
+   <span class="class">public</span> <span class="variable">String</span><span class="name"> medulla</span>; //core - present in thick hair
+   <span class="class">public </span><span class="variable">String</span> <span class="name">cortex</span>; //middle
+   <span class="class">public</span> <span class="variable">String</span> <span class="name">cuticle</span>; //outer layer
+   }</code>
+
+   <h2 class="subheader" id="Hair_Follicle">Hair Follicle</h2>
+<p>A tube-like structure located beneath the skin's surface that anchors the hair.
+Contains the hair bulb, where hair cells rapidly divide to form the hair strand.</p>
+
+<h2 class="subheader" id="Hair_Root">Hair Root</h2>
+<p>The part of a hair that's located in the skin and extends into deeper layers.</p>
+</section>
+
+<!--hair growth section-->
+<section class="main-section" id="Hair_Growth">
+  <header>Hair Growth</header>
+<p>The hair follicle is the structure responsible for hair production. Hair growth occurs in a cycle consisting of three main stages:</p>
+
+<ul>
+<li>Anagen - Growth Phase</li>
+<li>Catogen - Transition Phase</li>
+<li>Telogen - Resting Phase </li>
+</ul>
+
+<code>// Function to model the hair growth cycle
+<span class="class">function </span><span class="method">simulateHairGrowthCycle</span>(<span class="name">stage</span>) {
+  <span class="class">if</span> (<span class="name">stage</span> === <span class="println">"Anagen"</span>) {
+    return <span class="println">"Hair is actively growing"</span>;
+  } <span class="class">else if</span> (<span class="name">stage</span> === <span class="println">"Catagen"</span>) {
+    <span class="class">return</span> <span class="println">"Hair growth slows and the follicle shrinks"</span>;
+  } <span class="class">else if</span> (<span class="name">stage</span> === <span class="println">"Telogen"</span>) {
+    <span class="class">return</span> <span class="println">"Hair is in the resting phase before shedding"</span>;
+  } <span class="class">else</span> {
+    <span class="class">return</span> <span class="println">"Invalid stage. Please choose Anagen, Catagen, or Telogen."</span>;
+  }
+}
+
+</code>
+
+</section>
+
+<!--hair types section-->
+<section class="main-section" id="Hair_Types">
+  <header>Hair Types</header>
+
+  <p>Hair comes in various types, characterized by texture, thickness, and curl pattern. The four main types of hair textures are:</p>
+
+<ul>
+<li>Straight</li>
+<li>Wavy</li>
+<li>Curly</li>
+<li>Coily</li>
+</ul>
+
+<p>They can further be defined by density (low, medium, or high) or thickness of each individual strand  (fine, medium, or thick).</p>
+
+<code>// Function to determine hair texture type 
+<span class="class">function</span> <span class="method">getHairTexture</span>(<span class="name">type</span>) {
+  <span class="class">if</span> (<span class="name">type</span> === <span class="println">"straight"</span>) {
+    <span class="class">return</span> <span class="println">"Hair is smooth, no curl or wave."</span>;
+  } <span class="class">else if</span> (<span class="name">type</span> === <span class="println">"wavy"</span>) {
+    <span class="class">return</span> <span class="println"> "Hair has a gentle wave pattern."</span>;
+  } <span class="class">else if</span> (<span class="name">type</span> === <span class="println">"curly"</span>) {
+    <span class="class">return</span> <span class="println">"Hair forms well-defined curls."</span>;
+  } <span class="class">else if</span> (<span class="name">type</span> === <span class="println">"coily"</span>) {
+    <span class="class">return</span> <span class="println">"Hair has a tight zigzag pattern."</span>;
+  } <span class="class">else</span> {
+    <span class="class">return</span> <span class="println">"Invalid hair type."</span>;
+  }
+}
+</code>
+</section>
+
+<!--hair loss section-->
+<section class="main-section" id="Hair_Loss">
+  <header>Hair Loss</header>
+<p>Hair loss can be caused by various factors, including:</p>
+<ul>
+<li>Genetic Factors - Androgenic alopecia, commonly known as male/female pattern baldness, is the most common cause.</li>
+<li>Stress - Stress can cause telogen effluvium, where hair sheds prematurely.</li>
+<li>Hormonal Changes - Pregnancy, menopause, and other hormonal changes can lead to temporary hair loss.</li>
+<li>Nutritional Deficiencies - Lack of key nutrients like iron or biotin can contribute to hair thinning.</li>
+</ul>
+
+<p>Treatments are available over the counter as well as by prescripton depending on the severity.</p>
+
+<code>// Function to simulate the application of hair growth serum
+<span class="class">function </span><span class="variable">applyHairGrowthSerum</span>(<span class="name">condition</span>) {
+  <span class="class">if</span> (<span class="name">condition</span> === <span class="println">"healthy"</span>) {
+    <span class="class">return</span> <span class="println">"No treatment required"</span>;
+  } <span class="class">else if </span>(<span class="name">condition</span> === <span class="println">"thin"</span>) {
+    <span class="class">return</span> <span class="println">"Apply biotin-rich serum daily for best results"</span>;
+  } <span class="class">else if</span> (<span class="name">condition</span> === <span class="println">"balding"</span>) {
+    <span class="class">return</span> <span class="println">"Apply minoxidil twice daily for hair regrowth"</span>;
+  } <span class="class">else</span> {
+    <span class="class">return</span> <span class="println">"Consult a dermatologist for customized treatment"</span>;
+  }
+}
+</code>
+
+</section>
+
+<!--hair disorders section-->
+<section class="main-section" id="Scalp_and_Hair_Problems">
+  <header>Scalp and Hair Problems</header>
+<p>In addition to hair loss, people commonly experience hair problems that can be addressed with proper care:</p>
+<ul>
+<li>Dandruff - Can be treated with anti-dandruff shampoos containing ingredients like zinc pyrithione or ketoconazole.</li>
+<li>Frizz - Use anti-frizz products and avoid excessive heat styling.</li>
+<li>Split Ends - Regularly trim hair to remove split ends and prevent further damage.</li>
+<li>Oily Hair - Wash hair frequently and use a clarifying shampoo to remove excess oils.</li>
+<li>Thinning Hair - Try using volumizing products or consult a dermatologist for further treatment.</li>
+</ul>
+<code>// Function to suggest vitamins based on hair health status
+<span class="class">function</span> <span class="variable">recommendHairTreatment</span>(<span class="name">hairHealth</span>) {
+  <span class="class">if</span> (<span class="name">hairHealth</span> === <span class="println">"frizzy"</span>) {
+    <span class="class">return</span> <span class="println">"Invest in a leave in oil"</span>;
+  } <span class="class">else if</span> (<span class="name">hairHealth</span> === <span class="println">"dandruff"</span>) {
+    <span class="class">return</span> <span class="println">"Use an anti-dandruff shampoo and avoid sun exposure"</span>;
+    } <span class="class">else if</span> (<span class="name">hairHealth</span> === <span class="println">"oily"</span>) {
+    <span class="class">return</span> <span class="println">"Prolong washes with a dry shampoo"</span>;</code>
+</section>
+
+    </main>
+    </body>
+  </html>
