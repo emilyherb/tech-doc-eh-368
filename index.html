@@ -203,12 +203,12 @@ Contains the hair bulb, where hair cells rapidly divide to form the hair strand.
       modalImage.src = imagePath;
     }
   
-    // Close the modal when the close button (×) is clicked
+    // Close when (×) is clicked
     document.getElementById("close-modal").onclick = function() {
       document.getElementById("image-modal").style.display = "none";
     };
   
-    // Close the modal when clicking outside the image
+    // Close when clicking outside the image
     window.onclick = function(event) {
       const modal = document.getElementById("image-modal");
       if (event.target === modal) {
