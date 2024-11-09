@@ -154,46 +154,49 @@ body{
     text-decoration: none;
     cursor: pointer;
   }
-
-      @media only screen and (max-width: 815px) {
-        /* Navbar adjustments for smaller screens */
-        #navbar {
-          width: 100%;
-          height: auto;
-          max-height: none;
-          padding: 0;
-          border-bottom: 2px solid;
-          font-size: 1rem;
-          overflow: visible; 
-        }
-      
-        #doc-title {
-          padding: 1.5% 4% 1% 4%;
-        }
-      
-        .nav-link {
-          padding: 0 4%;
-          height: auto;
-        }
-      
-        #main-doc {
-          margin-left: 0;
-          margin-top: 270px;
-        }
-      }
-      
-      @media only screen and (max-width: 400px) {
-        #navbar {
-          max-width: 100%;
-        }
-      
-        #main-doc {
-          margin-left: 0;
-        }
-      
-        code {
-          margin: 0;
-          width: 100%;
-          padding: 15px 10px;
-        }
-      }
+  
+  @media only screen and (max-width: 815px) {
+    #navbar {
+      width: 100%;
+      height: auto;
+      max-height: none;
+      padding-bottom: 10px;
+      border-bottom: 2px solid;
+      font-size: 1rem;
+      overflow: visible;
+      position: sticky;
+      top: 0;
+      z-index: 1000; 
+      transition: transform 0.3s ease; /* Smooth transition for hiding */
+    }
+  
+    #doc-title {
+      padding: 1.5% 4% 1% 4%;
+    }
+  
+    .nav-link {
+      padding: 0 4%;
+      height: auto;
+    }
+  
+    #main-doc {
+      margin-left: 0;
+    }
+  }
+  
+  @media only screen and (max-width: 400px) {
+    #navbar {
+      max-width: 100%;
+    }
+  
+    #main-doc {
+      margin-left: 0;
+    }
+  
+    code {
+      margin: 0;
+      width: 100%;
+      padding: 15px 10px;
+    }
+  }
+  
