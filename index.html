@@ -7,12 +7,22 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Lora:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
     
-    
+<!-- JavaScript -->
+<script>
+    function showImage(imagePath) {
+      const image = document.getElementById("displayed-image");
+      image.src = imagePath;
+      image.style.display = "block";
+    }
+  </script>    
+
 <title>HAIR BASICS</title>
 </head>
 
 <!-- 
 <a class="subnav-link" href="#Hair_Shaft" >Hair Shaft</a>
+ <a class="subnav-link" href="#Hair_Follicle" >Hair Follicle</a>
+    <a class="subnav-link" href="#Hair_Root" ">Hair Root</a>
 
 <a class="subnav-link" href="javascript:void(0);" onclick="showImage('hair_shaft.jpg')">Hair Shaft</a>
         <a class="subnav-link" href="javascript:void(0);" onclick="showImage('hair_follicle.jpg')">Hair Follicle</a>
@@ -31,8 +41,8 @@
 <div class="dropdown">
   <nav class="subnav">
     <a class="subnav-link" href="javascript:void(0);" onclick="showImage('Hair_Shaft.jpg')">Hair Shaft</a>
-    <a class="subnav-link" href="#Hair_Follicle" >Hair Follicle</a>
-    <a class="subnav-link" href="#Hair_Root" ">Hair Root</a>
+    <a class="subnav-link" href="javascript:void(0);" onclick="showImage('hair_follicle.jpeg')">Hair Follicle</a>
+        <a class="subnav-link" href="javascript:void(0);" onclick="showImage('hair_root.jpg')">Hair Root</a>
   </nav>
 </div>
 <hr>
@@ -44,6 +54,11 @@
 <hr>
   <a class="nav-link" href="#Scalp_and_Hair_Problems">Scalp and Hair Problems</a>
 </nav>
+
+<div id="image-container">
+    <img id="displayed-image" src="" alt="Hair Anatomy" style="display:none; max-width:100%; height:auto;">
+  </div>
+
 
 <main id="main-doc"><!--main page content-->
 
